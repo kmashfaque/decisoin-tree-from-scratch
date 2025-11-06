@@ -1,3 +1,4 @@
+# Calculate the Gini index for a split dataset
 def gini_index(groups, classes):
 	# count all samples at split point
 	n_instances = float(sum([len(group) for group in groups]))
@@ -16,6 +17,8 @@ def gini_index(groups, classes):
 		# weight the group score by its relative size
 		gini += (1.0 - score) * (size / n_instances)
 	return gini
+
+
  
 # test Gini values
 # print(gini_index([[[1, 1], [1, 0]], [[1, 1], [1, 0]]], [0, 1]))
