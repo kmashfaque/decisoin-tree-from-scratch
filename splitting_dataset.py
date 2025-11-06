@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 from gini_index import gini_index
 
 
@@ -22,7 +23,7 @@ def get_split(dataset):
 			groups = test_split(index, row[index], dataset)
 
 			gini = gini_index(groups, class_values)
-			# print('X%d < %.3f Gini=%.3f' % ((index+1), row[index], gini))
+			print('X%d < %.3f Gini=%.3f' % ((index+1), row[index], gini))
 			if gini < b_score:
 				b_index, b_value, b_score, b_groups = index, row[index], gini, groups
 	return {'index':b_index, 'value':b_value, 'groups':b_groups}
@@ -37,6 +38,12 @@ dataset = [[2.771244718,1.784783929,0],
 	[7.444542326,0.476683375,1],
 	[10.12493903,3.234550982,1],
 	[6.642287351,3.319983761,1]]
+
+# for row in dataset:
+# 	color = 'red' if row[-1] == 0 else 'blue'
+# 	plt.scatter(row[0], row[1], color = color)
+# plt.show()
+
 split = get_split(dataset)
 
 # print('Split: [X%d < %.3f]' % ((split['index']+1), split['value']))s
