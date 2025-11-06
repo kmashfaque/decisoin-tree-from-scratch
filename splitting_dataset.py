@@ -9,7 +9,7 @@ def test_split(index, value, dataset):
 			left.append(row)
 		else:
 			right.append(row)
-	print(len(right))
+	
 	return left, right
 
  
@@ -38,5 +38,6 @@ dataset = [[2.771244718,1.784783929,0],
 	[10.12493903,3.234550982,1],
 	[6.642287351,3.319983761,1]]
 split = get_split(dataset)
+
 # print('Split: [X%d < %.3f]' % ((split['index']+1), split['value']))s
 
