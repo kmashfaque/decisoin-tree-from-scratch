@@ -21,7 +21,6 @@ def get_split(dataset):
 	for index in range(len(dataset[0])-1):
 		for row in dataset:
 			groups = test_split(index, row[index], dataset)
-
 			gini = gini_index(groups, class_values)
 			print('X%d < %.3f Gini=%.3f' % ((index+1), row[index], gini))
 			if gini < b_score:
