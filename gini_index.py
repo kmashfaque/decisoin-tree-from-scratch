@@ -21,5 +21,5 @@ def gini_index(groups, classes):
 
  
 # test Gini values
-# print(gini_index([[[1, 1], [1, 0]], [[1, 1], [1, 0]]], [0, 1]))
-# print(gini_index([[[1, 0], [1, 0]], [[1, 1], [1, 1]]], [0, 1]))
+print(gini_index([[[1, 1], [1, 0]], [[1, 1], [1, 0]]], [0, 1]))
+print(gini_index([[[1, 0], [1, 0]], [[1, 1], [1, 1]]], [0, 1]))
